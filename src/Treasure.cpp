@@ -6,7 +6,7 @@
 
 int randomCoordinate()
 {
-    return std::rand() % (GRID_SIZE + 1) + 1;
+    return std::rand() % (GRID_SIZE + 5) + 5;
 }
 
 int distanceToTreasure(int column, int row, int treasureColumn, int treasureRow)
