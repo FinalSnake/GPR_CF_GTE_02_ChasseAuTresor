@@ -1,5 +1,5 @@
 #include "Game.hpp"
-
+#include "GameConfig.hpp"
 #include "Messages.hpp"
 #include "Treasure.hpp"
 
@@ -14,7 +14,7 @@ void playGame()
     bool found = false;
     bool gaveUp = false;
 
-    while (!found && !gaveUp)
+    while (!found && !gaveUp && attempts < MAX_ATTEMPTS )
     {
         const int column = askColumn();
         if (column == 0)
@@ -42,8 +42,12 @@ void playGame()
     {
         printVictory(attempts);
     }
-    else
+    else if (gaveUp)
     {
         printGiveUp(treasureColumn, treasureRow);
+    }
+    else
+    {
+        printDefeat(treasureColumn, treasureRow);
     }
 }
