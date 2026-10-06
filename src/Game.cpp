@@ -10,7 +10,8 @@ void playGame()
 
     printWelcome();
 
-    int attempts = 0;
+    // changement des attempts >Sophie
+    int attempts = 6;
     bool found = false;
     bool gaveUp = false;
 

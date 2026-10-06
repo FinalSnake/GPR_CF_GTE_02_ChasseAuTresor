@@ -5,6 +5,7 @@
 #include "GameConfig.hpp"
 
 int randomCoordinate()
+
 {
     return std::rand() % (GRID_SIZE + 1) + 1;
 }
